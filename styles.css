@@ -8,6 +8,7 @@
     --preto: #14090F;
     --branco: #f2f2f2;
     --texto: #4d474b;
+    --azul: #9BD2E0;
 }
 
 
@@ -185,6 +186,31 @@ p {
 .img-svg-alimentando{
     margin-top: 1rem;
     width: 100vw;
+}
+
+footer{
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: var(--azul);
+    margin-top: 5rem;
+    display: flex;
+    justify-content:space-around;
+}
+
+.logo-footer{
+    width: 9rem;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.icons{
+    width: 3rem;
 }
 
 
