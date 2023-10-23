@@ -6,7 +6,7 @@
     --rosa-pink: #F59CBA;
     --rosa-pink_bg: #dd83a1;
     --preto: #14090F;
-    --branco: #fdfdfd;
+    --branco: #f2f2f2;
     --texto: #4d474b;
 }
 
@@ -29,7 +29,6 @@ body{
 
 .header-img{
     width: 24rem;
-    margin: -7rem 0 2rem 0;
 }
 
 
@@ -68,7 +67,7 @@ body{
     text-align: center;
     padding: 2rem;
     border: none;
-    background-color: #fff;
+    background-color: var(--branco);
     margin: 3rem 0 5rem 0;
     transition: transform 0.3s ease-in-out;
     border-radius: 8px;
@@ -78,8 +77,8 @@ body{
     transform: scale(1.05);
 }
 
-img {
-    max-width: 100%;
+.img-card {
+    width: 12rem;
     height: auto;
     border-radius: 5px;
 }
