@@ -23,13 +23,12 @@
 
 body{
     background-color: var(--branco);
-    margin: 0 1rem;
-    background-color: var(--branco);
+    margin: 0 2rem;
     color: var(--preto);
 }
 
 .header-img{
-    width: 24rem;
+    width: 20rem;
 }
 
 
@@ -40,13 +39,13 @@ body{
 }
 
 .title{
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 2.3rem;
     font-weight: 600;
 }
 
 .text{
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: 1.5rem;
     font-weight: 400;
     margin: 2rem 0 3rem 0;
@@ -135,7 +134,7 @@ p {
 
 .about-me{
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 }
 
 .title-about-me{
