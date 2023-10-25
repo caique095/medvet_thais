@@ -10,6 +10,7 @@
     --texto: #4d474b;
     --azul: #9BD2E0;
     --amarelo: #FAF6B3;
+    --cinza-escuro: #eae9e9;
 }
 
 
@@ -75,7 +76,7 @@ body{
 }
 
 .testimonials{
-    background-color: #eae9e9;
+    background-color: var(--cinza-escuro);
     width: 100vw;
 }
 
@@ -213,7 +214,32 @@ p {
 }
 
 /* FOOTER */ 
+footer{
+    background-color: #A97FFD;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+    padding: 2rem 0;
+}
 
+.footer-logo{
+    width: 20rem;
+}
+
+.footer-ul{
+    display: flex;
+}
+
+.footer-icons{
+    width: 3rem;
+}
+
+li{
+    list-style: none;
+}
 
 @media (max-width: 768px) {
     .carousel {
