@@ -153,9 +153,11 @@ p {
 /* SLIDE */ 
 
 .slide-container {
-    width: 100%;
+    width: 100vw;
+    padding: 2rem 0;
     overflow: hidden;
     position: relative;
+
 }
 
 .slide-wrapper {
@@ -203,6 +205,14 @@ p {
 .active {
     background-color: #f59cba;
 }
+
+.title-servicos{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* FOOTER */ 
 
 
 @media (max-width: 768px) {
