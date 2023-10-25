@@ -127,118 +127,54 @@
 
 
 <!-- SLIDE -->
-
-
-
-<div class="slider">
-  
-        <i class="fas fa-chevron-left" id="prevSlide"></i>
-
-
-    <div class="slide-container">
+<div class="slide-container">
+    <div class="slide-wrapper">
         <div class="slide">
-            <img class="img-slide" src="./ass_ets/icons/consulta.svg" alt="Consulta na casa do pet">
-            <h3 class="title">Consultas em domicílio</h3>
-            <p class="text">Consulta de qualidade na sua casa</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/hospedagem.svg" alt="Imagem 1">
+            <h3>Hospedagem para cães </h3>
+            <p class="slide-text">Sempre se sentindo em casa</p>
+            <a href="https://wa.me/5521966511204" class="button"> Saiba mais</a>
         </div>
-
         <div class="slide">
-            <img  class="img-slide" src="./ass_ets/icons/vacinas.svg" alt="Vacina em domicílio">
-            <h3 class="title">Vacinas em domicílio</h3>
-            <p class="text">Carinho e proteção em sua casa</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/consulta.svg" alt="Imagem 2">
+            <h3>Consulta em domicílio</h3>
+            <p class="slide-text">No conforto do seu lar</p>
+            <a href="https://wa.me/5521966511204" class="button button-slide">Agendar Consulta</a>
         </div>
-
         <div class="slide">
-            <img class="img-slide" src="./ass_ets/icons/baba.svg" alt="Babá para pet">
-            <h3 class="title">Babá para seu pet</h3>
-            <p class="text">Amor e cuidados enquanto você está fora</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/creche.svg" alt="Imagem 1">
+            <h3>Creche para cães </h3>
+            <p class="slide-text">Seu peludo vai amar!</p>
+            <a href="https://wa.me/5521966511204" class="button button-slide">Saiba mais</a>
         </div>
-
         <div class="slide">
-            <img class="img-slide" src="./ass_ets/icons/exames.svg" alt="Exames laboratoriais para seu pet">
-            <h3 class="title">Exames Laboratoriais</h3>
-            <p class="text">Amor e cuidados enquanto você está fora</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/exames.svg" alt="Imagem 2">
+            <h3>Exames Laboratoriais</h3>
+            <p class="slide-text">A chave para a saúde do seu pet</p>
+            <a href="https://wa.me/5521966511204" class="button">Agendar Exames</a>
         </div>
-
         <div class="slide">
-            <img class="img-slide" src="./ass_ets/icons/creche.svg" alt="Exames laboratoriais para seu pet">
-            <h3 class="title">Creche para cães</h3>
-            <p class="text">Seu pet sempre no seu lar</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/baba.svg" alt="Imagem 1">
+            <h3>Babá para cães</h3>
+            <p class="slide-text">Diversão e amor</p>
+            <a href="https://wa.me/5521966511204" class="button button-slide">Saiba mais</a>
         </div>
-
         <div class="slide">
-            <img class="img-slide" src="./ass_ets/hospedagem.svg" alt="Exames laboratoriais para seu pet">
-            <h3 class="title">Hospedagem</h3>
-            <p class="text">O melhor lugar, quando seu pet precisar</p>
-            <a href="https://wa.me/5521966511204" class="button slide-button">Agendar Consulta</a>
+            <img src="./ass_ets/icons/vacinas.svg" alt="Imagem 2">
+            <h3>Vacinação a domicílio</h3>
+            <p class="slide-text">Saúde em segurança</p>
+            <a href="https://wa.me/5521966511204" class="button button-slide">Agendar Vacinas</a>
         </div>
-
+        <!-- Repita esse bloco para os outros cards -->
     </div>
-
-    
-        <i class="fas fa-chevron-right" id="nextSlide"></i>
- 
+    <div class="indicators"></div>
 </div>
 
-
-
-
-<!-- JAVASCRIPT-->
-<script>
-    const slideContainer = document.querySelector('.slide-container');
-    const prevButton = document.getElementById('prevSlide');
-    const nextButton = document.getElementById('nextSlide');
-    let currentIndex = 0;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    // Funções para avançar e retroceder no slide
-    const prevSlide = () => {
-        currentIndex = (currentIndex - 1 + 3) % 3;
-        updateSlide();
-    };
-
-    const nextSlide = () => {
-        currentIndex = (currentIndex + 1) % 3;
-        updateSlide();
-    };
-
-    const updateSlide = () => {
-        const translateValue = currentIndex * -33.33; // -33.33% para cada slide
-        slideContainer.style.transform = `translateX(${translateValue}%)`;
-    };
-
-    // Adicione os ouvintes de eventos para os botões de navegação
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-
-    // Lidar com deslizamento (swipe) em dispositivos móveis
-    slideContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    slideContainer.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-
-    function handleSwipe() {
-        const diffX = touchStartX - touchEndX;
-        if (diffX > 50) {
-            nextSlide();
-        } else if (diffX < -50) {
-            prevSlide();
-        }
-    }
-</script>
-
-
-
+<script src="script.js"></script>
 
 </body>
 </html>
+
+
+
+
