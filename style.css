@@ -7,6 +7,7 @@
     --rosa-claro: #F8BECB;
     --preto: #14090F;
     --branco: #f2f2f2;
+    --title: #444043;
     --texto: #4d474b;
     --azul: #9BD2E0;
     --amarelo: #FAF6B3;
@@ -40,9 +41,15 @@ body{
     text-align: center;
 }
 
+.title{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--title);
+}
+
 .text{
-    margin: 2rem 0;
-    font-size: .9rem;
+    margin: 1.4rem 0 3.2rem 0;
+    font-size: 1rem;
 }
 
 .button{
@@ -52,6 +59,7 @@ body{
     padding: 1rem 2rem;
     border-radius: .5rem;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
+    cursor: pointer;
 }
 
 .ilustracao{
@@ -108,6 +116,7 @@ body{
     width: 100vw;
     padding: 4rem 0 5rem 0;
     margin-top: 2.5rem;
+      
 }
 
 .cta-text{
@@ -179,14 +188,6 @@ p {
 
 .slide-text{
     margin-bottom: 1.5rem;
-}
-
-.button {
-    background-color: #f59cba;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
 }
 
 .indicators {
